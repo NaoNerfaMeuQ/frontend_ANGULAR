@@ -1,0 +1,73 @@
+/* src/app/auth/login/login.component.css */
+.login-container {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"], /* Adicionado type="email" para consistência */
+.form-group input[type="password"] {
+  width: calc(100% - 20px); /* Ajusta para o padding */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.login-container button {
+  background-color: #007bff; /* Azul */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: calc(50% - 5px); /* Ajusta a largura para dois botões na linha */
+  margin-top: 15px; /* Espaço acima dos botões */
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+.login-container button:first-of-type { /* Estilo para o primeiro botão (Login) */
+  margin-right: 10px; /* Adiciona um espaço entre os botões */
+}
+
+
+.error-message {
+  color: #dc3545; /* Vermelho */
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.success-message {
+  color: #28a745; /* Verde */
+  margin-top: 15px;
+  font-weight: bold;
+}
