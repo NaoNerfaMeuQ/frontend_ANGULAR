@@ -1,73 +1,54 @@
 /* src/app/auth/login/login.component.css */
 .login-container {
-  font-family: Arial, sans-serif;
+  /* Mantenha o max-width, margin, padding, background, box-shadow do container geral */
   max-width: 400px;
   margin: 50px auto;
-  padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: #fff;
+  padding: 0; /* O padding agora será no mat-card */
+  background-color: transparent; /* A cor de fundo será do mat-card */
+  box-shadow: none; /* A sombra será do mat-card */
   text-align: center;
 }
 
-.login-container h2 {
-  color: #2c3e50;
+mat-card {
+  padding: 30px; /* Padding interno do cartão */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra do cartão */
+  border-radius: 8px;
+}
+
+mat-card-title {
+  text-align: center;
   margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 2em;
 }
 
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
+form {
+  display: flex;
+  flex-direction: column; /* Coloca os elementos em coluna */
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #555;
+mat-form-field {
+  width: 100%; /* Ocupa a largura total */
+  margin-bottom: 15px; /* Espaço entre os campos */
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"], /* Adicionado type="email" para consistência */
-.form-group input[type="password"] {
-  width: calc(100% - 20px); /* Ajusta para o padding */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
+button[mat-raised-button], button[mat-stroked-button] {
+  width: calc(50% - 5px); /* Mantém os dois botões na linha */
+  margin-top: 15px;
 }
 
-.login-container button {
-  background-color: #007bff; /* Azul */
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: calc(50% - 5px); /* Ajusta a largura para dois botões na linha */
-  margin-top: 15px; /* Espaço acima dos botões */
+button[mat-raised-button] {
+  margin-right: 10px; /* Espaço entre os botões */
 }
-
-.login-container button:hover {
-  background-color: #0056b3;
-}
-
-.login-container button:first-of-type { /* Estilo para o primeiro botão (Login) */
-  margin-right: 10px; /* Adiciona um espaço entre os botões */
-}
-
 
 .error-message {
-  color: #dc3545; /* Vermelho */
+  color: #dc3545;
   margin-top: 15px;
   font-weight: bold;
 }
 
 .success-message {
-  color: #28a745; /* Verde */
+  color: #28a745;
   margin-top: 15px;
   font-weight: bold;
 }

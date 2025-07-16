@@ -12,6 +12,7 @@ export class HelloService {
   constructor(private http: HttpClient) { } //injeta o HttpClient
 
   getHelloMessage(): Observable<string> {
+    console.log('HelloService: Fazendo requisição GET para:', this.apiUrl);
     // Faz uma requisição GET para a API e retorna a resposta como string
     return this.http.get(this.apiUrl, { responseType: 'text'});
   }

@@ -1,0 +1,26 @@
+.toolbar-spacer {
+  flex: 1 1 auto; /* Isso empurra o conteúdo para as bordas */
+}
+
+.mat-toolbar {
+  padding: 0 16px; /* Padding padrão para a toolbar */
+}
+
+.mat-button {
+  text-transform: uppercase; /* Botões Material geralmente são maiúsculas */
+  font-weight: bold;
+}
+
+/* Estilo para routerLinkActive, se desejar */
+.mat-button.active {
+  background-color: rgba(255, 255, 255, 0.1); /* Um leve destaque no botão ativo */
+}
+
+.router-outlet-container {
+  padding-top: 20px; /* Para dar um respiro da navegação */
+}
+
+body {
+  margin: 0;
+  background-color: #f4f7f6;
+}

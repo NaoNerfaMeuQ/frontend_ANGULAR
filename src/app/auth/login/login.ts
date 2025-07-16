@@ -6,11 +6,12 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../auth';
 import { LoginResponse } from '../auth.model'; // Importe LoginResponse para tipagem
+import { MaterialModule } from '../../material.module';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MaterialModule],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
@@ -66,7 +67,7 @@ export class LoginComponent {
         this.router.navigate(['/']); // Redireciona para a página inicial
       },
       (error) => {
-        this.errorMessage = error.error || 'Credenciais inválidas. Verifique seu email e senha.';
+        this.errorMessage = error.error || 'Email ou senha erradas.';
         this.successMessage = '';
         console.error('Erro no login:', error);
       }

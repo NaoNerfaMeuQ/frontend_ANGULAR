@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router'; // Importe RouterOutlet
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router'; // Importe RouterOutlet
+import { MaterialModule } from './material.module';
 
 @Component({
   selector: 'app-root', // Este é o seletor que o main.ts procura
   standalone: true,
-  imports: [CommonModule, RouterOutlet], // Importe RouterOutlet aqui
-  template: '<router-outlet></router-outlet>', // Onde as rotas serão exibidas
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    MaterialModule,
+    RouterLinkActive,
+    RouterLink
+  ], // Importe RouterOutlet aqui
+  templateUrl: './app.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent { }

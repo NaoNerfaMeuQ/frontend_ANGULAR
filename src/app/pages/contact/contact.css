@@ -1,0 +1,110 @@
+/* Estilos para page.component.css (aplique em about, services, contact) */
+.page-container {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-container h2 {
+  color: #2c3e50; /* Azul escuro */
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid #f0f8ff; /* Levemente azulado */
+  padding-bottom: 15px;
+}
+
+.page-container h3 {
+  color: #34495e; /* Um pouco mais claro que o h2 */
+  font-size: 1.6em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.page-container p, .page-container li {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.page-container ul {
+  list-style-type: none; /* Remove marcadores padrão */
+  padding-left: 0;
+}
+
+.page-container ul li {
+  background-color: #f8f8f8;
+  border-left: 5px solid #4CAF50; /* Verde */
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.page-container ul li h4 {
+  color: #4CAF50; /* Verde */
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+/* Estilos específicos para o formulário de contato */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: calc(100% - 22px); /* Ajusta para padding e borda */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.contact-form button[type="submit"] {
+  background-color: #007bff; /* Azul */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Para não ocupar 100% da largura */
+  display: block; /* Para o margin auto funcionar para centralizar */
+  margin: 20px auto 0 auto;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.contact-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
