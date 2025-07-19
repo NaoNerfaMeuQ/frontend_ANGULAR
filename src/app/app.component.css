@@ -1,26 +1,50 @@
-.toolbar-spacer {
-  flex: 1 1 auto; /* Isso empurra o conteúdo para as bordas */
+/* Estilos globais */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Consistente com Material */
+  background-color: #f4f7f6;
+  color: #333;
 }
 
+/* Toolbar / Navegação */
 .mat-toolbar {
-  padding: 0 16px; /* Padding padrão para a toolbar */
+  padding: 0 16px;
+  height: 64px; /* Altura padrão para toolbars do Material */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-logo {
+  height: 40px; /* Ajuste o tamanho da sua logo */
+  margin-right: 15px;
+}
+
+.mat-toolbar span {
+  font-size: 1.4em; /* Tamanho da fonte do título na toolbar */
+  font-weight: 500;
+  color: white; /* Cor do texto do título */
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
 }
 
 .mat-button {
-  text-transform: uppercase; /* Botões Material geralmente são maiúsculas */
+  text-transform: uppercase;
   font-weight: bold;
+  color: white; /* Cor do texto dos botões */
+  margin: 0 8px; /* Espaçamento entre os botões */
 }
 
-/* Estilo para routerLinkActive, se desejar */
 .mat-button.active {
-  background-color: rgba(255, 255, 255, 0.1); /* Um leve destaque no botão ativo */
+  background-color: rgba(255, 255, 255, 0.15); /* Destaque para link ativo */
+  border-radius: 4px;
 }
 
+.mat-button:hover {
+  background-color: rgba(255, 255, 255, 0.08); /* Efeito hover */
+}
+
+/* Container para o router outlet */
 .router-outlet-container {
-  padding-top: 20px; /* Para dar um respiro da navegação */
-}
-
-body {
-  margin: 0;
-  background-color: #f4f7f6;
+  /* Remova padding-top, já que o hero-section ocupa a tela toda */
 }

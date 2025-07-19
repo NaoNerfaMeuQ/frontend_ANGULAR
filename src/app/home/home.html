@@ -1,54 +1,10 @@
 <div class="home-container">
-  <header class="hero-section parallax-bg">
+  <header class="hero-section hero-home-page">
     <div class="hero-content">
       <h1>Bem-vindo(a) ao Espaço Psicológico</h1>
-      <p class="tagline">Um ambiente seguro e acolhedor para seu bem-estar mental.</p>
+      <p class="tagline">Seu caminho para o bem-estar e autoconhecimento.</p>
       <div class="hero-actions">
-        <button class="call-to-action" routerLink="/contato" mat-raised-button color="primary">Agende sua Consulta</button>
-        <button *ngIf="isLoggedIn" class="logout-button" (click)="onLogout()" mat-stroked-button color="warn">Sair</button>
       </div>
     </div>
   </header>
-
-  <section class="content-section backend-status">
-    <mat-card>
-      <mat-card-title>Status do Servidor</mat-card-title>
-      <mat-card-content>
-        <p>Conexão: <strong>{{ helloMessage }}</strong></p>
-        <p class="status-info">{{ isLoggedIn ? 'Esta mensagem é protegida e vem do servidor.' : 'Para acessar a mensagem protegida, por favor, faça login.' }}</p>
-      </mat-card-content>
-    </mat-card>
-  </section>
-
-  <section class="content-section about-overview">
-    <mat-card>
-      <mat-card-title>Sobre Mim</mat-card-title>
-      <mat-card-content>
-        <p>
-          [Nome da Psicóloga] é uma profissional dedicada à saúde mental e bem-estar, com foco em atendimento personalizado e empático para sua jornada de autodescoberta.
-        </p>
-        <button class="action-button" routerLink="/sobre-mim" mat-button color="primary">Saiba Mais</button>
-      </mat-card-content>
-    </mat-card>
-  </section>
-
-  <section class="content-section services-summary">
-    <mat-card>
-      <mat-card-title>Meus Serviços</mat-card-title>
-      <mat-card-content>
-        <p>Ofereço atendimento psicológico individual em diversas áreas, com sessões personalizadas para seu desenvolvimento e bem-estar.</p>
-        <ul>
-          <li>Terapia Individual para Adultos</li>
-          <li>Aconselhamento para Adolescentes</li>
-          <li>Orientações para Pais e Família</li>
-        </ul>
-        <button class="action-button" routerLink="/servicos" mat-button color="primary">Ver Todos os Serviços</button>
-      </mat-card-content>
-    </mat-card>
-  </section>
-
-  <footer class="footer-section">
-    <p>&copy; {{ currentYear }} [Nome da Psicóloga]. Todos os direitos reservados.</p>
-    <p>Entre em contato: [Telefone] | [Email]</p>
-  </footer>
 </div>

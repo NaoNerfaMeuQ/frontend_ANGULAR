@@ -1,171 +1,73 @@
-/* TODO: Melhorar a homepage e as páginas secundárias, tirar o login obrigatório para a Home e adicionar perfis, depois configurar email
-
-/* Reset básico e tipografia */
 .home-container {
-  font-family: 'Roboto', sans-serif; /* Fonte mais comum para Material Design */
+  font-family: 'Roboto', sans-serif;
   line-height: 1.8;
   color: #333;
-  max-width: 100%; /* Ajuste para preencher a tela */
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0; /* O padding será nas seções internas */
-  overflow-x: hidden; /* Evita scroll horizontal */
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Hero Section para o Parallax */
 .hero-section {
-  position: relative; /* Necessário para posicionamento */
-  height: 600px; /* Altura generosa para o efeito */
+  position: relative;
+  height: 100vh; /* Ocupa a altura total da viewport */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff; /* Texto claro sobre o background escuro */
-  overflow: hidden; /* Esconde o excesso da imagem */
-  background-image: url('/assets/images/brian.png'); /* Substitua pelo nome da sua imagem */
-  background-size: cover; /* Cobre a área sem distorcer */
+  color: #fff;
+  overflow: hidden;
+  background-image: url('/assets/images/background.png'); /* Sua imagem de fundo */
+  background-size: cover;
   background-position: center center;
-  background-attachment: fixed; /* ESSENCIAL PARA O EFEITO PARALLAX */
-  transition: background-position 0.3s ease-out; /* Suaviza o movimento */
+  background-attachment: fixed; /* Efeito Parallax */
+  transition: background-position 0.3s ease-out;
 }
 
-/* Conteúdo que rola sobre o parallax */
 .hero-content {
-  position: relative; /* Para garantir que o conteúdo fique sobre o background */
-  z-index: 2; /* Garante que o conteúdo fique acima do background */
+  position: relative;
+  z-index: 2;
   padding: 20px;
-  max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para o texto */
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.45); /* Fundo semi-transparente para o texto */
   border-radius: 10px;
 }
 
 .hero-content h1 {
-  font-size: 3.8em;
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para o texto */
+  font-size: 4em; /* Fonte maior para impacto */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  font-weight: 500;
 }
 
 .hero-content .tagline {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin-bottom: 40px;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-.hero-actions .mat-button,
-.hero-actions .mat-raised-button,
-.hero-actions .mat-stroked-button {
-  margin: 0 10px; /* Espaçamento entre os botões */
-}
-
-/* Estilos gerais para as seções de conteúdo */
-.content-section {
-  padding: 60px 20px; /* Espaçamento vertical generoso */
-  text-align: center;
-  background-color: #f8f8f8; /* Fundo claro para seções */
-  margin-bottom: 0; /* Não há margem entre seções, o padding já espaça */
-}
-
-.content-section:nth-of-type(odd) {
-  background-color: #ffffff; /* Alterna cores de fundo para contraste */
-}
-
-.content-section mat-card {
-  max-width: 800px; /* Largura máxima para cartões */
-  margin: 0 auto; /* Centraliza cartões */
-  padding: 40px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
-  border-radius: 12px;
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transição para hover */
-}
-
-.content-section mat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.content-section mat-card-title {
-  font-size: 2.2em;
-  color: #2c3e50;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.content-section mat-card-content p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  color: #555;
-}
-
-/* Ajustes específicos para a seção de serviços */
-.services-summary ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.services-summary li {
-  background-color: #eef5ff; /* Azul muito claro */
-  border-left: 5px solid #007bff; /* Azul primário */
-  padding: 15px 20px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  font-size: 1.05em;
-  color: #333;
-  text-align: left;
-}
-
-/* Botões de ação dentro das seções de conteúdo */
-.action-button.mat-button {
-  margin-top: 30px;
-  font-size: 1em;
-  padding: 10px 25px;
-}
-
-/* Footer Section */
-.footer-section {
-  background-color: #2c3e50; /* Mesmo azul da toolbar */
-  color: #ecf0f1;
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 0.95em;
-  margin-top: 0; /* Remove a margem superior padrão */
-}
-
-.footer-section p {
-  margin-bottom: 8px;
-}
+/* Remova todos os outros estilos de .backend-message, .about-section, .services-overview, etc. */
+/* Mantenha apenas os estilos relacionados à hero-section e ao container */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-section {
-    height: 450px;
+    height: 70vh; /* Ajuste para telas menores */
   }
   .hero-content h1 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
   .hero-content .tagline {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
-  .call-to-action, .logout-button {
-    font-size: 1em;
-    padding: 12px 20px;
-    margin: 10px auto;
-    display: block; /* Empilha botões em telas menores */
-    width: 80%;
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2em;
   }
-  .hero-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .content-section {
-    padding: 40px 15px;
-  }
-  .content-section mat-card {
-    padding: 25px;
-  }
-  .content-section mat-card-title {
-    font-size: 1.8em;
+  .hero-content .tagline {
+    font-size: 1.1em;
   }
 }

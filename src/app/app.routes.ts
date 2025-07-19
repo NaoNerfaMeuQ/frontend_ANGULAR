@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: '', //Rota para a raiz da aplicação (http://localhost:4200/)
     component: HomeComponent, // Quando a rota for a raiz, exibe o HomeComponent
-    canActivate: [authGuard] // <-- PROTEJA ESTA ROTA COM O GUARD
+    //canActivate: [authGuard] // <-- PROTEGE A ROTA COM O GUARD (RETIRAR DEPOIS)
   },
   {
     path: 'login', //Rota para o login
